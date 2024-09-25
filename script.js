@@ -49,31 +49,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
     slides[currentSlide].classList.add('showing');
     setInterval(nextSlide, 3000);
+});
 
     // Scroll-triggered animations
-    const items = document.querySelectorAll('.scroll-item');
+    document.addEventListener('DOMContentLoaded', () => {
+        const items = document.querySelectorAll('.scroll-item');
     
-    const options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.3
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            } else {
-                // Optionally reset the animation state if the item is out of view
-                entry.target.classList.remove('visible');
-            }
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.3
+        };
+    
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    // Optionally reset the animation state if the item is out of view
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, options);
+    
+        items.forEach(item => {
+            observer.observe(item);
         });
-    }, options);
-
-    items.forEach(item => {
-        observer.observe(item);
     });
-});
+    
+
 // form code 
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -117,10 +121,97 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     if (isValid) {
         alert('Form submitted successfully!');
     } else {
-        alert('Please fix the errors above.');
+    
         event.preventDefault(); // Prevent form submission if validation fails
     }
 });
+
+
+// this  for the small screen photo slider 
+
+
+
+let uniqueCurrentSlide = 0;
+
+function uniqueShowSlide(index) {
+const slides1 = document.querySelectorAll('.unique-carousel-slide');
+if (index >= slides1.length) uniqueCurrentSlide = 0;
+if (index < 0) uniqueCurrentSlide = slides1.length - 1;
+const offset = -uniqueCurrentSlide * 100;
+document.querySelector('.unique-carousel-wrapper').style.transform = `translateX(${offset}%)`;
+}
+
+function uniqueNextSlide() {
+uniqueCurrentSlide++;
+uniqueShowSlide(uniqueCurrentSlide);
+}
+
+function uniquePrevSlide() {
+uniqueCurrentSlide--;
+uniqueShowSlide(uniqueCurrentSlide);
+}
+
+// Optional: Auto slide
+setInterval(() => {
+uniqueNextSlide();
+},2000);
+
+// pop up code 
+   function showToast() {
+            var overlay = document.getElementById('overlaypopup');
+            overlay.classList.add('show');
+        }
+
+        // Function to close the toast
+        function closeToast() {
+            var overlaypopup = document.getElementById('overlaypopup');
+            overlaypopup.classList.remove('show');
+        }
+
+        // Show toast when the page is reloaded, but not on refresh
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check if the sessionStorage has a specific key
+            if (!sessionStorage.getItem('pageLoaded')) {
+                // Show the toast on first page load
+                showToast();
+                // Set a flag in sessionStorage to mark that the page has been loaded
+                sessionStorage.setItem('pageLoaded', 'true');
+            }
+        });
+        // ask by principle and chairman
+        const messageSlides = document.querySelectorAll('.slide'); // Array of slides
+const previousButton = document.querySelector('.left-arrow'); // Previous button
+const nextButton = document.querySelector('.right-arrow'); // Next button
+let currentSlideIndex = 0; // Current active slide index
+
+function updateSlidePosition() {
+    messageSlides.forEach((slideElement, i) => {
+        slideElement.style.transform = `translateX(${100 * (i - currentSlideIndex)}%)`; // Slide movement calculation
+    });
+}
+
+function moveToNextSlide() {
+    currentSlideIndex = (currentSlideIndex + 1) % messageSlides.length; // Loop to the start after the last slide
+    updateSlidePosition();
+}
+
+function moveToPreviousSlide() {
+    currentSlideIndex = (currentSlideIndex - 1 + messageSlides.length) % messageSlides.length; // Loop to the end when going backwards
+    updateSlidePosition();
+}
+
+// Event listeners for slide navigation
+nextButton.addEventListener('click', moveToNextSlide);
+previousButton.addEventListener('click', moveToPreviousSlide);
+
+// Initialize slide positions
+updateSlidePosition();
+
+        
+     
+
+       
+        
 
 
 

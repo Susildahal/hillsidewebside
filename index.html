@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> index </title>
-
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="style.css" rel="stylesheet">
+    <link href="nevandfott.css" rel="stylesheet">
     <style>
         iframe{
   margin-left:10%;
@@ -15,8 +16,11 @@
     </style>
 </head>
 <body>
-    <div class="preloader"></div>
+
+      <div class="preloader"></div>
     <!--oncontextmenu="return false">-->
+
+  
     <nav class="navbar">
         <div class="brand-title">Hill Side</div>
         <a href="#" class="toggle-button" id="toggle-button">
@@ -26,40 +30,86 @@
         </a>
         <div class="navbar-links" id="navbar-links">
             <ul>
-                <li class="active1"><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html" target="_self">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">About Us <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">About Us <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="missionandvission.html">Mission and Vision</a>
-                        <a href="#">History</a>
-                        <a href="teachers-datails.html">Teacher Details</a>
-                        <a href="whyhillside.html">Why Hill Side</a>
+                        <a href="missionandvission.html" target="_self">Mission and Vision</a>
+                        <a href="history.html" target="_self">History</a>
+                        <a href="teachers-datails.html" target="_self">Teacher Details</a>
+                        <a href="whyhillside.html" target="_self">Why Hill Side</a>
+                        <a href="ourcorevalue.html" target="_self">Our Core Value</a>
+                        <a href="principle.html" target="_self">Message From Principle</a>
+                        <a href="chairman.html" target="_self">Message From Chairman</a>
 
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Our Course <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Our Course <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="primary.html">Primary</a>
-                        <a href="secondary.html">Secondary</a>
+                        <a href="primary.html" target="_self">Primary</a>
+                        <a href="secondary.html" target="_self">Secondary</a>
                     </div>
                 </li>
-                <li><a href="contract.html">Contact Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contract.html" target="_self">Contact Us</a></li>
+                <li><a href="gallery.html" target="_self">Gallery</a></li>
                 <li class="dropdown">
-                    <a href="#">Other <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Other <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="caleander.html">Calendar</a>
-                        <a href="#">Notice</a>
-                        <a href="#">Service</a>
+                        <a href="caleander.html" target="_self">Calendar</a>
+                        <a href="#" target="_self">Notice</a>
+                        <a href="ourservice.html" target="_self">Service</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
+    
+    <!-- pop up code -->
+    <div id="overlaypopup" class="overlaypopup">
+        <div id="toastMessage" class="toast">
+            <button class="close-btn" onclick="closeToast()">✖</button>
+            <!-- Placeholder for an image -->
+            <img src="image/1718181722754.jpg" alt="Popup Image">
+            <span> Welcome to Hill Side Secondary English School!<br>
+                Established in 2050<br>
+                Providing quality education with a commitment to excellence.</span>
+        </div>
+    </div>
+
+    <!-- social media links code-->
+    <div class="social-media-container social-media-left">
+        <div class="social-media-group">
+            <a href="tel:+9779841318273" class="social-icon" id="phone">
+                <img src="image/call.png" alt="Phone">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="https://www.facebook.com/groups/9841318273" class="social-icon" id="facebook">
+                <img src="image/fb.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <div class="social-media-container social-media-right">
+        <div class="social-media-group">
+            <a href="https://wa.me/1234567890" class="social-icon" id="whatsapp">
+                <img src="image/whatapp.png" alt="WhatsApp">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="mailto:hillsideebs2050@gmail.com" class="social-icon" id="gmail">
+                <img src="image/gmail.png" alt="Gmail">
+                <span class="tooltip">hillsideebs2050@gmail.com</span>
+            </a>
+            <a href="viber://chat?number=9841318273" class="social-icon" id="viber">
+                <img src="image/viber.png" alt="Viber">
+                <span class="tooltip">9849458657</span>
+            </a>
+        </div>
+
+    </div>
+ 
     <div class="overlay" id="overlay"></div>
     <div class="content">
-
+        
         <div class="slider">
             <div class="slides">
                 <img src="image/child.jpg" alt="Image 1">
@@ -68,7 +118,39 @@
                 <img src="image/school1.jpg" alt="Image 4">
                 <img src="image/teacheer1.jpg" alt="Image 5">
                 <img src="image/school.jpeg" alt="Image 6">
+                <img src="image/aichild.webp" alt="Image 7">
+                <img src="image/aiphoto.webp" alt="Image 8">
             </div>
+        </div>
+     
+        <div class="scroll-item">
+        <div class="hill-container">
+            <h1>Introduction</h1>
+            <div class="scroll-item">
+            <p id="hill-container">
+                Hill Side Secondary School is dedicated to providing quality education. At Hill Side, we
+                value diversity and recognize that every student is unique. Our mission is to support each student in reaching
+                their full potential and exploring new horizons in learning. We foster creativity and encourage students to be
+                passionate about knowledge and discovery. Hill Side emphasizes Science, Technology, English, Arts, and
+                Mathematics base  education in our class daily , ensuring that our students excel academically and are prepared for future success.
+            </p></div>
+              <div class="scroll-item">
+            <div class="hill-stats">
+                <div class="hill-stat">
+                    <i class="fa fa-graduation-cap"></i>
+                    <span>200+ Students</span>
+                </div>
+                <div class="hill-stat">
+                    <i class="fa fa-handshake-o"></i>
+                    <span>100% Excellence Result </span>
+                </div>
+                <div class="hill-stat">
+                    <i class="fa fa-cogs"></i>
+                    <span>100%  Good Service</span>
+                </div>
+                </div>
+            </div>
+        </div>
         </div>
 
         <div class="scroll-item">
@@ -113,11 +195,10 @@
                 <div class="school-description" id="school-description">
                     <h1>Why Hill Side Secondary School?</h1>
                     <p>Hill Side Secondary School is a top-ranked institution in Gotikhel, scoring top results every
-                        year in
-                        board examinations. It successfully blends tradition with a forward-thinking education philosophy that
-                        truly meets the needs of young children venturing into adulthood in an increasingly complex world. The
-                        school emphasizes holistic development, nurturing intellectual, social, and emotional growth, ensuring students
-                        are well-prepared to face the challenges of the future.</p>
+                        year in board examinations. <br>It successfully blends tradition with a forward-thinking education philosophy that
+                        truly meets the needs <br>of young children venturing into adulthood in an increasingly complex world.<br> The
+                        school emphasizes holistic development, nurturing intellectual,<br> social, and emotional growth, ensuring students
+                        are well-prepared<br> to face the challenges of the future.</p>
                     <h1>Features:</h1>
                     <ul class="features-list" id="features-list">
                         <li>
@@ -137,32 +218,47 @@
             </div>
         </div>
 
-        <div class="scroll-item">
-            <div class="askbyteacher">
-                <div class="askdis">
-                    <h1 class="ask">Ask By Principal</h1>
-                    <img id="askimg" src="image/teacheer1.jpg" alt="">
-                    <p id="ask">Welcome to another exciting school year! As we embark on this journey together, I want
-                        to share
-                        some guidance to help us all thrive. Students, embrace every learning opportunity with curiosity
-                        and a
-                        positive attitude. Respect your peers, teachers, and staff, and engage in school activities to
-                        enrich
-                        your experience.
-                        Remember, each challenge is a chance to grow. Teachers, your passion and dedication inspire our
-                        students
-                        daily. Continue to innovate in your teaching methods, build meaningful connections with your
-                        students,
-                        and collaborate with your colleagues for continuous growth.
-                        Together, let's create a supportive, respectful, and dynamic environment where everyone feels
-                        valued and
-                        motivated to achieve their best. I am confident that with our collective efforts, we will make
-                        this year
-                        a remarkable one. Wishing you all a successful and fulfilling school year ahead!</p>
-                </div>
+   <!-- ask from principle -->
+   <div class="slider-container">
+    <div class="slider">
+        <!-- Slide 1 -->
+        <div class="slide">
+            <div class="text-content">
+                <h2>Message from the Chairman</h2>
+                <p>
+                    When it comes to our sustained efforts aimed at positioning hill side  as an educational institution of repute, we start by asking ourselves some fundamental questions – how can we prepare our students for the disruptions that are set to characterize the 21st Century skill in our scholl ? <br>
+                    What specific competenc.....
+                </p>
+                <a href="chairman.html" class="read-more">Read More &rarr;</a>
+                <p class="author">Manohar Kumar Bhattarai<br><small>Chairman</small></p>
+            </div>
+            <div class="image-content">
+                <img src="image/1718181718338.jpg" alt="Chairman">
             </div>
         </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+            <div class="text-content">
+                <h2>Message from the Principal</h2>
+                <p>
+                    Our aim is to inspire students to achieve the highest standards of intellectual and personal development through a stimulating and comprehensive program. We aim to prepare students to become responsible citizens and future leaders. <br>We are .......
+                </p>
+                <a href="principle.html" class="read-more">Read More &rarr;</a>
+                <p class="author">pradeep  Bhattarai<br><small>Principal</small></p>
+            </div>
+            <div class="image-content">
+                <img src="image/1718181718338.jpg" alt="Principal">
+            </div>
+        </div>
+    </div>
+    <!-- Arrows for navigation -->
+    <div class="slider-arrows">
+        <span class="arrow left-arrow">&larr;</span>
+        <span class="arrow right-arrow">&rarr;</span>
+    </div>
+</div>
 
+<!-- mission anfd vission -->
         <div class="scroll-item">
             <div class="container11">
                 <section class="vision">
@@ -192,28 +288,58 @@
                 </section>
                 </div>
                 </div>
+
+                <!-- our core value-->
+                 <div class="scroll-item">
+                <div class="page-wrapper">
+                    <div class="core-values-container">
+                        <div class="core-values-text">
+                            <h2 class="galleryh1">Our Core Values</h2>
+                            <p>Building quality lives and strong culture through...</p>
+                            <ul>                 <div class="scroll-item">
+
+                                <li>Compassion</li>
+                                <li>Respect</li>
+                                <li>Service</li>
+                                <li>Excellence</li>
+                                <li>Responsibility</li>
+                                <li>Teamwork</li>
+                                <li>Integrity</li>
+                                <li>Empowerment</li>
+                                </div>
+                            </ul>
+                        </div>
+                        <div class="core-values-image">
+                            <img src="image/1718181722754.jpg" alt="Classroom Image">
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <!-- service -->
+             
             <!--teachers datails-->
-        
+    
         <h1 class="galleryh1">Teachers Details  </h1>
         <div class="card-container">
             <div class="card">
                 <img src="image/1718181718338.jpg" class="card-img-top" alt="Image 1">
                 <div class="card-body">
                     <h5 class="card-title">Card Title 1</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, magnam suscipit? Tempora velit consectetur </p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">An item</li>
                     <li class="list-group-item">A second item</li>
                     <li class="list-group-item">A third item</li>
                 </ul>
+                
             </div>
-            
+        
             <div class="card">
                 <img src="image/child4.jpg" class="card-img-top" alt="Image 2">
                 <div class="card-body">
                     <h5 class="card-title">Card Title 2</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, magnam suscipit? Tempora velit consectetur .</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">An item</li>
@@ -225,7 +351,7 @@
                 <img src="image/school1.jpg" class="card-img-top" alt="Image 3">
                 <div class="card-body">
                     <h5 class="card-title">Card Title 3</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, magnam suscipit? Tempora velit consectetur .</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">An item</li>
@@ -237,7 +363,7 @@
                 <img src="image/school.jpeg" class="card-img-top" alt="Image 4">
                 <div class="card-body">
                     <h5 class="card-title">Card Title 4</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, magnam suscipit? Tempora velit consectetur .</p>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">An item</li>
@@ -246,10 +372,81 @@
                 </ul>
             </div>
         </div>
+<!-- blog container-->
+     
+    
+<div class="scroll-item">
+<h1 class="galleryh1">Blog And Article </h1>
+</div>
+  
+<div class="hss-school-name">
+    <h1>Hill Side Secondary English School</h1>
+  </div>
+<div class="hss-container">
+    <div class="hss-main-image">
+      <img src="image/1718181722754.jpg" alt="Main Image" class="hss-image">
+      <div class="hss-navigation">
+        
+      </div>
+      <div class="hss-caption">
+        <h2>Welcome to Hill Side Secondary English School</h2>
+        <p>At Hill Side Secondary English School, we foster a nurturing environment that supports academic excellence and personal growth. Discover the values and opportunities we offer.</p>
+      </div>
+    </div>
+    <div class="hss-thumbnail-container">
+      <div class="hss-thumbnail">
+        <img src="image/1718181770432.jpg" alt="Thumbnail 1">
+        <h3>Our Mission</h3>
+        <p>Our mission is to provide quality education that prepares students for the future while instilling values and critical thinking skills.</p>
+      </div>
+      <div class="hss-thumbnail">
+        <img src="image/child3.jpg" alt="Thumbnail 2">
+        <h3>Academic Excellence</h3>
+        <p>We are dedicated to academic excellence with a curriculum that challenges students and encourages a love for learning.</p>
+      </div>
+      <div class="hss-thumbnail">
+        <img src="image/1718181789340.jpg" alt="Thumbnail 3">
+        <h3>Extracurricular Activities</h3>
+        <p>From sports to arts, our extracurricular activities help students develop a range of skills and discover new interests.</p>
+      </div>
+      <div class="hss-thumbnail">
+        <img src="image/child.jpg" alt="Thumbnail 4">
+        <h3>Community Engagement</h3>
+        <p>We believe in giving back to the community and our students actively participate in various social responsibility projects.</p>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-item">
+    <div class="page-wrapper">
+        <div class="core-values-container">
+            <div class="core-values-text">
+                <h2 class="galleryh1">Our Service</h2>
+                <p>Building quality lives and strong culture through...</p>
+                <ul>                 <div class="scroll-item">
 
+                    <li>Good Reading Environment</li>
+                    <li>Experienced and Supportive Teachers</li>
+                    <li>Regular Revision Classes</li>
+                    <li>Access to Computer Labs</li>
+                    <li>Clean and Safe School Premises </li>
+                    <li>Organized Study Materials</li>
+                    
+                    </div>
+                </ul>
+            </div>
+            <div class="core-values-image">
+                <img src="image/1718181722754.jpg" alt="Classroom Image">
+            </div>
+        </div>
+    </div>
+    </div>
 
+  
+  
 
-
+    
+    
+<div class="scroll-item">
      <!-- gallery code -->
         <h1 class="galleryh1">Our Gallery </h1>
             <div class="gallery">
@@ -280,6 +477,23 @@
             <img src="image/school1.jpg" alt="Image 8">
             </div>
             </div>
+</div>
+            <!-- this is for small device-->
+            <div class="unique-carousel">
+                <div class="unique-carousel-wrapper">
+                  <div class="unique-carousel-slide active">
+                    <img src="image/1718181722754.jpg" alt="Image 1">
+                  </div>
+                  <div class="unique-carousel-slide">
+                    <img src="image/child4.jpg" alt="Image 2">
+                  </div>
+                  <div class="unique-carousel-slide">
+                    <img src="image/child2.jpg" alt="Image 3">
+                  </div>
+                </div>
+                <button class="unique-carousel-prev" onclick="uniquePrevSlide()">&#10094;</button>
+                <button class="unique-carousel-next" onclick="uniqueNextSlide()">&#10095;</button>
+              </div>
         
             <button class="fancy-button"><a href="gallery.html">View More</a></button>
             
@@ -325,28 +539,28 @@
             <footer>
                 <div class="footer-container">
                     <div class="footer-logo">
-                        <img src="image/1718181718338.jpg" alt="RAI School Logo">
+                        <img src="image/logo.jpg" alt="hill side logo">
                         <p>Hill Side </p>
                        
                     </div>
                     <div class="footer-contact">
-                        <a href="https://facebook.com" target="_blank">
-                            <img src="path/to/facebook-icon.png" alt="Facebook">
+                        <a href="https://www.facebook.com/groups/724459442800424" target="_self">
+                            <img src="image/fb.png" alt="Facebook">
                         </a>
-                        <a href="https://instagram.com" target="_blank">
-                            <img src="path/to/instagram-icon.png" alt="Instagram">
+                        <a href="mailto:hillsideebs2050@gmail.com" target="_self">
+                            <img src="image/gmail.png" alt="gmail">
                         </a>
                         <p>
-                            <span>📍 Gotikhel ( Near coop Reasort ), laitpur</span><br>
-                            <span>📞 +977-9801966967, 01-4510436 / 984134233</span><br>
-                            <span>✉️ hillside@122gmail.com</span>
+                            <span> <i class="fa-solid fa-location-dot"></i>  Gotikhel ( Near coop Reasort ), laitpur</span><br>
+                            <span><i class="fa-sharp fa-solid fa-phone-volume"></i> +977- 9841318273, 9849458657 </span><br>
+                          
                         </p>
                     </div>
                     <div class="footer-links">
                         <h4>QUICK LINKS</h4>
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li><a href="missionandvission.html"></a>Vision and Mission</li>
+                            <li><a href="missionandvission.html">Vision and Mission </a></li>
                             <li><a href="whyhillside.html">Why Hill Side</a></li>
                             <li><a href="">History</a></li>
                             <li><a href="gallery.html">Gallery</a></li>

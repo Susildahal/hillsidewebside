@@ -4,9 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar only and footer </title>
-<link rel="stylesheet" href="style.css">
+    <link href="nevandfott.css" rel="stylesheet">
 </head>
 <style>
+
+
+.contact-banner-section {
+        margin-top: 70px;
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  background-image: url('image/aichild.webp'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
     * {
     box-sizing: border-box;
 }
@@ -80,38 +95,81 @@ h1{
         </a>
         <div class="navbar-links" id="navbar-links">
             <ul>
-                <li class="active1"><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html" target="_self">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">About Us <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">About Us <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="missionandvission.html">Mission And Vision</a>
-                        <a href="#">History</a>
-                        <a href="teachers-datails.html">Teacher Details</a>
-                        <a href="whyhillside.html">Why Hill Side</a>
+                        <a href="missionandvission.html" target="_self">Mission and Vision</a>
+                        <a href="#" target="_self">History</a>
+                        <a href="teachers-datails.html" target="_self">Teacher Details</a>
+                        <a href="whyhillside.html" target="_self">Why Hill Side</a>
+                        <a href="ourcorevalue.html" target="_self">Our Core Value</a>
+                        <a href="principle.html" target="_self">Message From Principle</a>
+                        <a href="chairman.html" target="_self">Message From Chairman</a>
+
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Our Course <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Our Course <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="primary.html">Primary</a>
-                        <a href="secondary.html">Secondary</a>
+                        <a href="primary.html" target="_self">Primary</a>
+                        <a href="secondary.html" target="_self">Secondary</a>
                     </div>
                 </li>
-                <li><a href="contract.html">Contact Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contract.html" target="_self">Contact Us</a></li>
+                <li><a href="gallery.html" target="_self">Gallery</a></li>
                 <li class="dropdown">
-                    <a href="#">Other <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Other <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="calendar.html">Calendar</a>
-                        <a href="#">Notice</a>
-                        <a href="#">Another Link</a>
+                        <a href="caleander.html" target="_self">Calendar</a>
+                        <a href="#" target="_self">Notice</a>
+                        <a href="ourservice.html" target="_self">Service</a>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="overlay" id="overlay"></div>
-    <div class="content">
+<div class="contain">
+    <div class="social-media-container social-media-left">
+        <div class="social-media-group">
+            <a href="tel:+1234567890" class="social-icon" id="phone">
+                <img src="image/call.png" alt="Phone">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="https://www.facebook.com/groups/724459442800424" class="social-icon" id="facebook">
+                <img src="image/fb.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <div class="social-media-container social-media-right">
+        <div class="social-media-group">
+            <a href="https://wa.me/1234567890" class="social-icon" id="whatsapp">
+                <img src="image/whatapp.png" alt="WhatsApp">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="mailto:hillsideebs2050@gmail.com" class="social-icon" id="gmail">
+                <img src="image/gmail.png" alt="Gmail">
+                <span class="tooltip">hillsideebs2050@gmail.com</span>
+            </a>
+            <a href="viber://chat?number=9863652183" class="social-icon" id="viber">
+                <img src="image/viber.png" alt="Viber">
+                <span class="tooltip">9849458657</span>
+            </a>
+        </div>
+
+    </div>
+    <section class="contact-banner-section">
+        <div class="contact-banner-overlay">
+            <div class="contact-content">
+                <div class="contact-title">Primary</div>
+                <nav class="contact-breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">Home</a> / <span> Our Course /</span><span class="breadcrumb-current">Primary </span>
+                </nav>
+            </div>
+        </div>
+    </section>
+    
         <div class="container">
             <div class="image-side">
                 <img src="image/achiment.jpg" alt="Description of image">

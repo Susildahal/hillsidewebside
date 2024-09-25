@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nevandfott.css" type="text/css">
+    <title>Document</title>
+    <style>
+        .contact-banner-section {
+            margin-top: 70px;
+            position: relative;
+            width: 100%;
+            height: 70vh;
+            /* Adjust height as needed */
+            background-image: url('image/mission\ \ and\ vission\ 2.png');
+            /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            object-fit: cover;
+        }
+
+        .values-wrapper {
+            font-family: Arial, sans-serif;
+            margin-top: 100px;
+            padding: 40px;
+            background-color: #f7f7f7;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            color: #00bfa5;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .value-card h3 {
+                font-size: 20px;
+            }
+
+            .value-card p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .values-wrapper {
+                padding: 20px;
+            }
+
+            .value-card h3 {
+                font-size: 18px;
+            }
+
+            .value-card p {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader"></div>
+    <!--oncontextmenu="return false">-->
+    <nav class="navbar">
+        <div class="brand-title">Hill Side</div>
+        <a href="#" class="toggle-button" id="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li class="active"><a href="index.html" target="_self">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" target="_self">About Us <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="missionandvission.html" target="_self">Mission and Vision</a>
+                        <a href="history.html" target="_self">History</a>
+                        <a href="teachers-datails.html" target="_self">Teacher Details</a>
+                        <a href="whyhillside.html" target="_self">Why Hill Side</a>
+                        <a href="ourcorevalue.html" target="_self">Our Core Value</a>
+                        <a href="principle.html" target="_self">Message From Principle</a>
+                        <a href="chairman.html" target="_self">Message From Chairman</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" target="_self">Our Course <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="primary.html" target="_self">Primary</a>
+                        <a href="secondary.html" target="_self">Secondary</a>
+                    </div>
+                </li>
+                <li><a href="contract.html" target="_self">Contact Us</a></li>
+                <li><a href="gallery.html" target="_self">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#" target="_self">Other <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="caleander.html" target="_self">Calendar</a>
+                        <a href="#" target="_self">Notice</a>
+                        <a href="ourservice.html" target="_self">Service</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- social media links code-->
+    <div class="social-media-container social-media-left">
+        <div class="social-media-group">
+            <a href="tel:+1234567890" class="social-icon" id="phone">
+                <img src="image/call.png" alt="Phone">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="https://www.facebook.com/groups/724459442800424" class="social-icon" id="facebook">
+                <img src="image/fb.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <div class="social-media-container social-media-right">
+        <div class="social-media-group">
+            <a href="https://wa.me/1234567890" class="social-icon" id="whatsapp">
+                <img src="image/whatapp.png" alt="WhatsApp">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="mailto:hillsideebs2050@gmail.com" class="social-icon" id="gmail">
+                <img src="image/gmail.png" alt="Gmail">
+                <span class="tooltip">hillsideebs2050@gmail.com</span>
+            </a>
+            <a href="viber://chat?number=9863652183" class="social-icon" id="viber">
+                <img src="image/viber.png" alt="Viber">
+                <span class="tooltip">9849458657</span>
+            </a>
+        </div>
+
+    </div>
+    <section class="contact-banner-section">
+        <div class="contact-banner-overlay">
+            <div class="contact-content">
+                <div class="contact-title">Our Service</div>
+                <nav class="contact-breadcrumb">
+                    <a href="index.html" class="breadcrumb-link">Home</a> /<span class="breadcrumb-current">Our Service
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="content">
+        <div class="values-wrapper">
+            <div class="value-card">
+                <h3> Good Reading Environment</h3>
+                <p>A well-equipped library with a wide range of books, magazines, and educational materials.</p>
+                <p>2.Comfortable seating arrangements to promote a calm and focused reading atmosphere.</p>
+                <p>3. Quiet zones specifically designated for self-study and group discussions.</p>
+                <p>4. Proper lighting and ventilation to create a conducive learning environment..</p>
+            </div>
+
+            <div class="value-card">
+                <h3> Experienced and Supportive Teachers</h3>
+                <p>1. Highly qualified teachers with expertise in their subjects.
+                    .</p>
+                <p>2.Approachable and available for one-on-one guidance and doubt-clearing sessions.
+                    .</p>
+                <p>3.Regular training and workshops for teachers to stay updated with the latest teaching methods .</p>
+                <p>4.Encouragement of interactive learning through discussions, debates, and group activities.
+                </p>
+            </div>
+
+            <div class="value-card">
+                <h3>Regular Revision Classes</h3>
+                <p>1. Scheduled extra classes focusing on key topics and difficult areas.</p>
+                <p>2.Use of practice tests and quizzes to assess understanding and track progress. </p>
+                <p>3.Small group sessions for personalized attention and targeted learning.</p>
+                <p>4. Feedback and evaluation to help students identify strengths and areas for improvement.</p>
+            </div>
+
+            <div class="value-card">
+                <h3> Access to Computer Labs
+                </h3>
+                <p>1.Well-maintained labs with modern computers and high-speed internet.</p>
+                <p>2.Software and tools available for various subjects and research needs. </p>
+                <p>3.Guidance from instructors to teach digital skills and safe internet practices.</p>
+                <p>4. Regular updates of systems and software to keep up with technological advancements.</p>
+            </div>
+
+            <div class="value-card">
+                <h3> Clean and Safe School Premises</h3>
+                <p>1.Regular cleaning and maintenance to ensure a hygienic environment.</p>
+                <p>2.Safe drinking water and clean washroom facilities for students and staff. </p>
+                <p>3.Proper security measures, including CCTV and trained security personnel. </p>
+                <p>4.Adequate emergency exits and first aid facilities to handle unforeseen situations.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Teamwork</h3>
+                <p>1. Collaborating effectively to achieve common goals.</p>
+                <p>2. Valuing each team member's contributions.</p>
+                <p>3. Building trust and open communication.</p>
+                <p>4. Fostering a spirit of cooperation and support.</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Organized Study Materials</h3>
+                <p>1.Availability of comprehensive notes, guides, and handouts for all subjects.
+                </p>
+                <p>2.Access to previous years’ question papers and sample papers for practice.</p>
+                <p>3.Subject-specific study materials aligned with the curriculum. </p>
+                <p>4.Easy access to materials through both physical and digital formats for convenience</p>
+            </div>
+
+            <div class="value-card">
+                <h3>Empowerment</h3>
+                <p>1. Encouraging self-confidence and growth.</p>
+                <p>2. Providing opportunities for leadership and decision-making.</p>
+                <p>3. Supporting creativity and innovation.</p>
+                <p>4. Building an environment of encouragement and support.</p>
+            </div>
+        </div>
+
+
+
+
+        <!-- footer code-->
+        <footer>
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="image/1718181718338.jpg" alt="hill side logo">
+                    <p>Hill Side </p>
+
+                </div>
+                <div class="footer-contact">
+                    <a href="https://www.facebook.com/groups/724459442800424" target="_self">
+                        <img src="image/fb.png" alt="Facebook">
+                    </a>
+                    <a href="mailto:hillsideebs2050@gmail.com" target="_self">
+                        <img src="image/gmail.png" alt="gmail">
+                    </a>
+                    <p>
+                        <span> <i class="fa-solid fa-location-dot"></i> Gotikhel ( Near coop Reasort ),
+                            laitpur</span><br>
+                        <span><i class="fa-sharp fa-solid fa-phone-volume"></i> +977- 9841318273, 9849458657 </span><br>
+
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <h4>QUICK LINKS</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="missionandvission.html">Vision and Mission </a></li>
+                        <li><a href="whyhillside.html">Why Hill Side</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="ourservice.html">Service</a></li>
+                        <li><a href="contract.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Hill School. All rights reserved. | Maintained by <a href="#">Susil Dahal</a></p>
+            </div>
+        </footer>
+
+
+
+
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

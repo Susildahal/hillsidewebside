@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="nevandfott.css" rel="stylesheet">
+    <style>
+  
+
+  .values-wrapper {
+            font-family: Arial, sans-serif;
+            margin-top:100px;
+            padding: 40px;
+            background-color: #f7f7f7;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            overflow: hidden;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .value-card h3 {
+            font-size: 24px;
+            color: #00bfa5;
+            margin-bottom: 10px;
+        }
+
+        .value-card p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .value-card h3 {
+                font-size: 20px;
+            }
+
+            .value-card p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .values-wrapper {
+                padding: 20px;
+            }
+
+            .value-card h3 {
+                font-size: 18px;
+            }
+
+            .value-card p {
+                font-size: 13px;
+            }
+        }
+
+  
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Hill Side</div>
+        <a href="#" class="toggle-button" id="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links" id="navbar-links">
+            <ul>
+                <li class="active"><a href="index.html" target="_self">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" target="_self">About Us <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="missionandvission.html" target="_self">Mission and Vision</a>
+                        <a href="#" target="_self">History</a>
+                        <a href="teachers-datails.html" target="_self">Teacher Details</a>
+                        <a href="whyhillside.html" target="_self">Why Hill Side</a>
+                        <a href="ourcorevalue.html" target="_self">Our Core Value</a>
+                        <a href="principle.html" target="_self">Message From Principle</a>
+                        <a href="chairman.html" target="_self">Message From Chairman</a>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" target="_self">Our Course <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="primary.html" target="_self">Primary</a>
+                        <a href="secondary.html" target="_self">Secondary</a>
+                    </div>
+                </li>
+                <li><a href="contract.html" target="_self">Contact Us</a></li>
+                <li><a href="gallery.html" target="_self">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="#" target="_self">Other <span class="dropdown-icon">&#9660;</span></a>
+                    <div class="dropdown-content">
+                        <a href="caleander.html" target="_self">Calendar</a>
+                        <a href="#" target="_self">Notice</a>
+                        <a href="ourservice.html" target="_self">Service</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+   
+    <div class="social-media-container social-media-left">
+        <div class="social-media-group">
+            <a href="tel:+1234567890" class="social-icon" id="phone">
+                <img src="image/call.png" alt="Phone">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="https://www.facebook.com/groups/724459442800424" class="social-icon" id="facebook">
+                <img src="image/fb.png" alt="Facebook">
+            </a>
+        </div>
+    </div>
+    <div class="social-media-container social-media-right">
+        <div class="social-media-group">
+            <a href="https://wa.me/1234567890" class="social-icon" id="whatsapp">
+                <img src="image/whatapp.png" alt="WhatsApp">
+                <span class="tooltip">9841318273</span>
+            </a>
+            <a href="mailto:hillsideebs2050@gmail.com" class="social-icon" id="gmail">
+                <img src="image/gmail.png" alt="Gmail">
+                <span class="tooltip">hillsideebs2050@gmail.com</span>
+            </a>
+            <a href="viber://chat?number=9863652183" class="social-icon" id="viber">
+                <img src="image/viber.png" alt="Viber">
+                <span class="tooltip">9849458657</span>
+            </a>
+        </div>
+
+    </div>
+     
+    <div class="overlay" id="overlay"></div>
+    <div class="content">
+        <div class="values-wrapper">
+            <div class="value-card">
+                <h3>Compassion</h3>
+                <p>1. Understanding and empathizing with others' feelings.</p>
+                <p>2. Providing support and care during difficult times.</p>
+                <p>3. Acting with kindness and patience.</p>
+                <p>4. Creating an inclusive and caring environment.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Respect</h3>
+                <p>1. Valuing diversity and differing perspectives.</p>
+                <p>2. Treating everyone with dignity and fairness.</p>
+                <p>3. Encouraging open and honest communication.</p>
+                <p>4. Fostering a culture of mutual respect and understanding.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Service</h3>
+                <p>1. Committing to helping others selflessly.</p>
+                <p>2. Providing high-quality service to the community.</p>
+                <p>3. Encouraging volunteerism and community involvement.</p>
+                <p>4. Striving to make a positive impact on society.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Excellence</h3>
+                <p>1. Pursuing the highest standards in all endeavors.</p>
+                <p>2. Encouraging continuous learning and improvement.</p>
+                <p>3. Promoting innovation and creativity.</p>
+                <p>4. Celebrating achievements and setting new goals.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Responsibility</h3>
+                <p>1. Being accountable for actions and decisions.</p>
+                <p>2. Taking ownership of personal and collective growth.</p>
+                <p>3. Encouraging ethical and sustainable practices.</p>
+                <p>4. Contributing positively to the community.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Teamwork</h3>
+                <p>1. Collaborating effectively to achieve common goals.</p>
+                <p>2. Valuing each team member's contributions.</p>
+                <p>3. Building trust and open communication.</p>
+                <p>4. Fostering a spirit of cooperation and support.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Integrity</h3>
+                <p>1. Upholding honesty and transparency.</p>
+                <p>2. Acting ethically in all situations.</p>
+                <p>3. Encouraging a culture of trust and fairness.</p>
+                <p>4. Leading by example with strong moral principles.</p>
+            </div>
+    
+            <div class="value-card">
+                <h3>Empowerment</h3>
+                <p>1. Encouraging self-confidence and growth.</p>
+                <p>2. Providing opportunities for leadership and decision-making.</p>
+                <p>3. Supporting creativity and innovation.</p>
+                <p>4. Building an environment of encouragement and support.</p>
+            </div>
+        </div>
+    
+        </div>
+
+   
+      
+    <script src="script.js">
+    
+    
+    </script>
+
+    
+</body>
+</html>
+
+
+
+

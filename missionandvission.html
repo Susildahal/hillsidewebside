@@ -4,67 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive Navbar only and footer </title>
-<link rel="stylesheet" href="style.css">
-<style>
-    .content-container {
+    <link href="nevandfott.css" rel="stylesheet">
+    <style>
+
+
+.container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow: hidden;
+    margin-top: 5%;
+}
+
+.left-column {
+    flex: 1;
     padding: 20px;
-    background-color: #f9f9f9;
-}
-
-.vision-section, .mission-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 400px;
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-   
-
-}
-
-.vision-section:hover, .mission-section:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-.vision-image, .mission-image {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
-
-}
-
-.vision-content, .mission-content {
-    padding: 15px;
-    text-align: left;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.vision-title, .mission-title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
     text-align: center;
 }
 
-.vision-text, .mission-text {
-    font-size: 16px;
-    color: #666;
-    line-height: 1.6;
-}
-.vision-image:hover, .mission-image:hover{
-    filter: blur(1px);
+.school-image {
+    width: 100%;
+    height:500px;
+    border-radius: 5px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
 }
 
-</style>
+.right-column {
+    flex: 2;
+    padding: 40px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.line {
+    width: 50px;
+    height: 2px;
+    background-color: #000;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .right-column {
+        padding: 20px;
+    }
+}
+/* Resetting margin and padding for the entire document */
+
+.contact-banner-section {
+    margin-top: 70px;
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Adjust height as needed */
+  background-image: url('image/mission\ \ and\ vission\ 2.png'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+    </style>
+
 </head>
 <body>
     <div class="preloader"></div>
@@ -77,31 +104,35 @@
         </a>
         <div class="navbar-links" id="navbar-links">
             <ul>
-                <li class="active1"><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html" target="_self">Home</a></li>
                 <li class="dropdown">
-                    <a href="#">About Us <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">About Us <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="missionandvission.html">Mission and Vision</a>
-                        <a href="#">History</a>
-                        <a href="teachers-datails.html">Teacher Details</a>
-                        <a href="whyhillside.html">Why Hill Side</a>
+                        <a href="missionandvission.html" target="_self">Mission and Vision</a>
+                        <a href="#" target="_self">History</a>
+                        <a href="teachers-datails.html" target="_self">Teacher Details</a>
+                        <a href="whyhillside.html" target="_self">Why Hill Side</a>
+                        <a href="ourcorevalue.html" target="_self">Our Core Value</a>
+                        <a href="principle.html" target="_self">Message From Principle</a>
+                        <a href="chairman.html" target="_self">Message From Chairman</a>
+
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#">Our Course <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Our Course <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="primary.html">Primary</a>
-                        <a href="secondary.html">Secondary</a>
+                        <a href="primary.html" target="_self">Primary</a>
+                        <a href="secondary.html" target="_self">Secondary</a>
                     </div>
                 </li>
-                <li><a href="contract.html">Contact Us</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contract.html" target="_self">Contact Us</a></li>
+                <li><a href="gallery.html" target="_self">Gallery</a></li>
                 <li class="dropdown">
-                    <a href="#">Other <span class="dropdown-icon">&#9660;</span></a>
+                    <a href="#" target="_self">Other <span class="dropdown-icon">&#9660;</span></a>
                     <div class="dropdown-content">
-                        <a href="calendar.html">Calendar</a>
-                        <a href="#">Notice</a>
-                        <a href="#">Another Link</a>
+                        <a href="caleander.html" target="_self">Calendar</a>
+                        <a href="#" target="_self">Notice</a>
+                        <a href="ourservice.html" target="_self">Service</a>
                     </div>
                 </li>
             </ul>
@@ -109,30 +140,70 @@
     </nav>
     <div class="overlay" id="overlay"></div>
     <div class="content">
-        <div class="content-container">
-            <section class="vision-section">
-                <img src="image/1718181770432.jpg" alt="Vision Image" class="vision-image">
-                <div class="vision-content">
-                    <h2 class="vision-title">Vision</h2>
-                    <p class="vision-text">An educational ecosystem where children from diverse communities acquire knowledge and
-                        skill through quality education to face the challenges of technology-supported modern education.<br>
-                        We at Hill Side School believe that each child entrusted to us will receive education in its finest form. Learning is a life-long process and all students and teachers are challenged to exceed their own expectations.<br>
+        <div class="social-media-container social-media-left">
+            <div class="social-media-group">
+                <a href="tel:+1234567890" class="social-icon" id="phone">
+                    <img src="image/call.png" alt="Phone">
+                    <span class="tooltip">9841318273</span>
+                </a>
+                <a href="https://www.facebook.com/groups/724459442800424" class="social-icon" id="facebook">
+                    <img src="image/fb.png" alt="Facebook">
+                </a>
+            </div>
+        </div>
+        <div class="social-media-container social-media-right">
+            <div class="social-media-group">
+                <a href="https://wa.me/1234567890" class="social-icon" id="whatsapp">
+                    <img src="image/whatapp.png" alt="WhatsApp">
+                    <span class="tooltip">9841318273</span>
+                </a>
+                <a href="mailto:hillsideebs2050@gmail.com" class="social-icon" id="gmail">
+                    <img src="image/gmail.png" alt="Gmail">
+                    <span class="tooltip">hillsideebs2050@gmail.com</span>
+                </a>
+                <a href="viber://chat?number=9863652183" class="social-icon" id="viber">
+                    <img src="image/viber.png" alt="Viber">
+                    <span class="tooltip">9849458657</span>
+                </a>
+            </div>
+    
+        </div>
 
-                        No student will be left behind as they are provided with the skills required for life and work in the 21st century. When students complete their school lives, they will have the qualifications, leadership qualities and sense of destiny to be successful and make a positive contribution to society.</p>
+        <section class="contact-banner-section">
+            <div class="contact-banner-overlay">
+                <div class="contact-content">
+                    <div class="contact-title">Mission and Vision</div>
+                    <nav class="contact-breadcrumb">
+                        <a href="index.html" class="breadcrumb-link">Home</a> /<span class="breadcrumb-current">Mission and Vision</span>
+                    </nav>
                 </div>
-            </section>
-        
-            <section class="mission-section">
-                <img src="image/child4.jpg" alt="Mission Image" class="mission-image">
-                <div class="mission-content">
-                    <h2 class="mission-title">Mission</h2>
-                    <p class="mission-text">To develop, strengthen, and deliver innovative education through a rigorous,
-                        well-rounded curriculum and extra-curricular activities that encourage cognitive, social,
-                        physical, and emotional development.<br>
-                        Hill Side School strives for excellence in everything it does, encouraging students to attain both academic success and personal achievement. The mission of Hill Side  School is to provide each student a diverse education in a safe, supportive environment that promotes sound values, self discipline, motivation and excellence in learning. 
-                        <br>The school assists the students in developing skills to become independent, self-sufficient adults who will succeed and contribute responsibly in a global community.</p>
-                </div>
-            </section>
+            </div>
+        </section>
+        <div class="container">
+            <!-- Left Column with Image -->
+            <div class="left-column">
+                <img src="image/1718181722754.jpg" alt="Students Studying" class="school-image">
+            </div>
+    
+            <!-- Right Column with Mission and Vision Content -->
+            <div class="right-column">
+                <h2>Mission/Vision</h2>
+                <div class="line"></div>
+                <h3>Mission</h3>
+                <p>Excellence and Learning</p>
+                <p>To develop, strengthen, and deliver innovative education through a rigorous,
+                    well-rounded curriculum and extra-curricular activities that encourage cognitive, social,
+                    physical, and emotional development.<br>
+                    Hill Side School strives for excellence in everything it does, encouraging students to attain both academic success and personal achievement. The mission of Hill Side  School is to provide each student a diverse education in a safe, supportive environment that promotes sound values, self discipline, motivation and excellence in learning. 
+                    <br>The school assists the students in developing skills to become independent, self-sufficient adults who will succeed and contribute responsibly in a global community.</p>
+                
+                <h3>Vision</h3>
+                <p>An educational ecosystem where children from diverse communities acquire knowledge and
+                    skill through quality education to face the challenges of technology-supported modern education.<br>
+                    We at Hill Side School believe that each child entrusted to us will receive education in its finest form. Learning is a life-long process and all students and teachers are challenged to exceed their own expectations.<br>
+
+                    No student will be left behind as they are provided with the skills required for life and work in the 21st century. When students complete their school lives, they will have the qualifications, leadership qualities and sense of destiny to be successful and make a positive contribution to society.</p>
+            </div>
         </div>
         
 
