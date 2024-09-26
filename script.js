@@ -104,9 +104,9 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     // Validate phone number
     const phone = document.getElementById('phone');
-    const phonePattern = /^[0-9]{10}$/;
+    const phonePattern = /^[0-9]$/;
     if (!phonePattern.test(phone.value)) {
-        isValid = false;
+        isValid = true;
         document.getElementById('phoneError').textContent = 'Phone number must be 10 digits';
     }
 
@@ -179,33 +179,40 @@ uniqueNextSlide();
             }
         });
         // ask by principle and chairman
-        const messageSlides = document.querySelectorAll('.slide'); // Array of slides
-const previousButton = document.querySelector('.left-arrow'); // Previous button
-const nextButton = document.querySelector('.right-arrow'); // Next button
-let currentSlideIndex = 0; // Current active slide index
-
-function updateSlidePosition() {
-    messageSlides.forEach((slideElement, i) => {
-        slideElement.style.transform = `translateX(${100 * (i - currentSlideIndex)}%)`; // Slide movement calculation
-    });
-}
-
-function moveToNextSlide() {
-    currentSlideIndex = (currentSlideIndex + 1) % messageSlides.length; // Loop to the start after the last slide
-    updateSlidePosition();
-}
-
-function moveToPreviousSlide() {
-    currentSlideIndex = (currentSlideIndex - 1 + messageSlides.length) % messageSlides.length; // Loop to the end when going backwards
-    updateSlidePosition();
-}
-
-// Event listeners for slide navigation
-nextButton.addEventListener('click', moveToNextSlide);
-previousButton.addEventListener('click', moveToPreviousSlide);
-
-// Initialize slide positions
-updateSlidePosition();
+        let currentSlideIndex = 0; // To keep track of the current slide
+        const slides = document.querySelectorAll('.new-slide'); // Select all slides
+        const totalSlides = slides.length; // Total number of slides
+        
+        // Function to show the current slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach((slide) => {
+                slide.style.display = 'none';
+            });
+            
+            // Show the current slide
+            slides[index].style.display = 'flex'; // Ensure it displays flex for layout
+        }
+        
+        // Function to navigate to the next slide
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % totalSlides; // Loop back to first slide
+            showSlide(currentSlideIndex);
+        }
+        
+        // Function to navigate to the previous slide
+        function previousSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides; // Loop to last slide
+            showSlide(currentSlideIndex);
+        }
+        
+        // Initial setup: show the first slide
+        showSlide(currentSlideIndex);
+        
+        // Add event listeners to arrows
+        document.querySelector('.left-arrow').addEventListener('click', previousSlide);
+        document.querySelector('.right-arrow').addEventListener('click', nextSlide);
+        
 
         
      

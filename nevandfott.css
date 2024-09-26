@@ -286,11 +286,11 @@
   
   /* Positioning for different screen sizes */
   .social-media-left {
-    left: 20px;
+    left: 1px;
   }
   
   .social-media-right {
-    right: 20px;
+    right:1px;
   }
   @media (max-width:768px) {
     .social-icon img {
